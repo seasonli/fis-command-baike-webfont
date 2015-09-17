@@ -34,39 +34,44 @@ exports.register = function(commander) {
             var iconDirList = (function getIconDirList() {
                 var iconDirRegExp = new RegExp(/^icon$/),
                     _iconDirList = [];
-                (function readDir(dir) {
-                    var items = fs.readdirSync(dir);
-                    for (var i in items) {
-                        var path = dir + '/' + items[i],
-                            stat = fs.lstatSync(path);
-                        if (stat.isDirectory()) {
-                            readDir(path);
-                            if (iconDirRegExp.test(items[i])) {
+                (function readDir(_dir) {
+                    var _items = fs.readdirSync(_dir);
+                    for (var i in _items) {
+                        var _path = path.join(_dir, _items[i]),
+                            _stat = fs.lstatSync(_path);
+                        if (_stat.isDirectory()) {
+                            readDir(_path);
+                            if (iconDirRegExp.test(_items[i])) {
                                 _iconDirList.push({
-                                    src: path,
-                                    dest: dir,
-                                    fontname: ((fis.config.get('namespace') + '-') || '') + path.match(/^static\/(.*)\/resource/)[1]
+                                    src: _path,
+                                    dest: _dir,
+                                    fontname: _path.match(/static\\(.*)\\resource|static\/(.*)\/resource/)[1].replace(/\/|\\/g, '-')
                                 });
                             }
                         }
                     }
-                })('static');
+                })(path.join(root, 'static'));
                 return _iconDirList;
             })();
 
 
             // 生成字体文件
             for (var i in iconDirList) {
-                webfont.generateFonts({
+                var settings = {
                     src: iconDirList[i].src,
                     dest: iconDirList[i].dest,
                     fontname: iconDirList[i].fontname,
                     order: 'name',
                     startCodepoint: 0xe600,
                     descent: 0
-                })
+                };
+                if (i + 1 == iconDirList.length) {
+                    settings.callback = function() {
+                        console.log(' [SUCCESS] 完成 ' + iconDirList.length + ' 组字体文件的生成');
+                    }
+                }
+                webfont.generateFonts(settings);
             };
 
-            console.log(' [SUCCESS] 完成 ' + iconDirList.length + ' 个字体文件的生成');
         });
 }

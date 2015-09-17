@@ -1,7 +1,7 @@
 {
   "name": "fis-command-baike-webfont",
   "description": "Ultimate SVG to webfont converter for baike.",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author": {
     "name": "LiJijun",
     "email": "lijijun@baidu.com"
