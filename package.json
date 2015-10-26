@@ -1,11 +1,15 @@
 {
   "name": "fis-command-baike-webfont",
-  "description": "Ultimate SVG to webfont converter for baike.",
+  "description": "Ultimate SVG to webfont converter for baike",
   "version": "0.0.5",
   "author": {
     "name": "LiJijun",
-    "email": "lijijun@baidu.com; season.chopsticks@gmail.com"
+    "email": "season.chopsticks@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seasonli/fis-command-baike-webfont"
+  },  
   "license": "MIT",
   "main": "index.js",
   "engines": {
@@ -41,11 +45,5 @@
     "truetype",
     "css",
     "icon"
-  ],
-  "readme": "## fis-command-baike-webfont\n\n",
-  "readmeFilename": "README.md",
-  "_id": "fis-command-baike-webfont@0.0.1",
-  "scripts": {},
-  "_shasum": "2620d842ca6eacf1e0aebde90ac28902716aa645",
-  "_from": "fis-command-baike-webfont@"
+  ]
 }
