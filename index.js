@@ -45,7 +45,7 @@ exports.register = function(commander) {
                                 _iconDirList.push({
                                     src: _path,
                                     dest: _dir,
-                                    fontname: _path.match(/static\\(.*)\\resource|static\/(.*)\/resource/)[1].replace(/\/|\\/g, '-')
+                                    fontname: _path.replace(/\//g, '\\').match(/static\\(.*)\\resource|static\/(.*)\/resource/)[1].replace(/\/|\\/g, '-')
                                 });
                             }
                         }
