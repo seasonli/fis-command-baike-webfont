@@ -1,14 +1,14 @@
 {
   "name": "fis-command-baike-webfont",
   "description": "Ultimate SVG to webfont converter for baike",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "author": {
     "name": "seasonli",
     "email": "season.chopsticks@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/seasonli/fis-command-baike-webfont"
+    "url": "git+https://github.com/seasonli/fis-command-baike-webfont.git"
   },
   "license": "MIT",
   "main": "index.js",
@@ -45,5 +45,41 @@
     "truetype",
     "css",
     "icon"
-  ]
+  ],
+  "gitHead": "669cef711fe39309fdb113a228362cf06c4bab4a",
+  "bugs": {
+    "url": "https://github.com/seasonli/fis-command-baike-webfont/issues"
+  },
+  "homepage": "https://github.com/seasonli/fis-command-baike-webfont#readme",
+  "_id": "fis-command-baike-webfont@0.0.9",
+  "scripts": {},
+  "_shasum": "080d98361272d135c3ac918a497e8245bbeab207",
+  "_from": "fis-command-baike-webfont@latest",
+  "_npmVersion": "2.14.12",
+  "_nodeVersion": "4.2.4",
+  "_npmUser": {
+    "name": "seasonli",
+    "email": "season.chopsticks@gmail.com"
+  },
+  "dist": {
+    "shasum": "080d98361272d135c3ac918a497e8245bbeab207",
+    "size": 10641,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/fis-command-baike-webfont/download/fis-command-baike-webfont-0.0.9.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "seasonli",
+      "email": "season.chopsticks@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-6-west.internal.npmjs.com",
+    "tmp": "tmp/fis-command-baike-webfont-0.0.9.tgz_1454663114971_0.8768932071980089"
+  },
+  "directories": {},
+  "publish_time": 1454663115548,
+  "_cnpm_publish_time": 1454663115548,
+  "_resolved": "https://registry.npm.taobao.org/fis-command-baike-webfont/download/fis-command-baike-webfont-0.0.9.tgz",
+  "readme": "ERROR: No README data found!"
 }

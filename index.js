@@ -24,7 +24,7 @@ exports.register = function(commander) {
             var filepath = path.resolve(root, 'fis-conf.js');
 
             if (exists(filepath)) {
-                require(filepath);
+                // require(filepath);
             } else {
                 fis.log.error('请在模块根目录下运行 fis-command-baike-webfont');
                 return;

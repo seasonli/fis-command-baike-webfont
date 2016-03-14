@@ -4,6 +4,8 @@ exports.type = 'perItem';
 
 exports.active = true;
 
+exports.description = 'merges multiple paths in one if possible';
+
 exports.params = {
     collapseRepeated: true,
     leadingZero: true,
@@ -12,7 +14,7 @@ exports.params = {
 
 var path2js = require('./_path.js').path2js,
     js2path = require('./_path.js').js2path,
-    interesects = require('./_path.js').interesects;
+    intersects = require('./_path.js').intersects;
 
 /**
  * Merge multiple Paths into one.
@@ -54,7 +56,7 @@ exports.fn = function(item, params) {
                 prevPathJS = path2js(prevContentItem),
                 curPathJS = path2js(contentItem);
 
-            if (equalData && !interesects(prevPathJS, curPathJS)) {
+            if (equalData && !intersects(prevPathJS, curPathJS)) {
                 js2path(prevContentItem, prevPathJS.concat(curPathJS), params);
                 return false;
             }
